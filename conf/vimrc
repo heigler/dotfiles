@@ -1,22 +1,22 @@
+" highlight
 syntax on
+" shows line number
 set number
-set incsearch
+" shows the current line
 set cursorline
-set linebreak
+" better for search
 set ignorecase
 set smartcase
-set scrolloff=5
-set nostartofline
+" ident with 4 spaces
 set smartindent
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
 set autoindent
-set shiftround
-set backspace=indent,eol,start
-set nobackup noswapfile
-set colorcolumn=80
+" stop backuping files
+set nobackup
+set colorcolumn=79
 
 " COLORS
 
