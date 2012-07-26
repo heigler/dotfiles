@@ -1,0 +1,37 @@
+[core]
+    excludesfile = ~/.gitignore
+
+[color]
+    diff = auto
+    branch = auto
+    status = auto
+    interactive = auto
+
+# Ver:
+#
+#   http://shallowsky.com/blog/programming/gitcolors.html
+#   http://scie.nti.st/2007/5/2/colors-in-git
+#
+[color "diff"]
+    commit = blue reverse
+    old = red bold
+    new = green bold
+
+[pretty]
+    graph = format:%Cblue%h%d%Creset%20%s
+
+[alias]
+    st = !GIT_PAGER= git status
+    ci = commit
+    br = branch
+    co = checkout
+    lp = log -p
+    ll = log --graph --pretty=format:%Cblue%h%d%Creset%x20%s
+    la = log --graph --pretty=format:%Cblue%h%d%Creset%x20%s --all
+    ls = ls-files
+
+[user]
+    name = Heigler Rocha
+    email = lordheigler@gmail.com
+
+
