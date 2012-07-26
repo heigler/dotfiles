@@ -1,0 +1,45 @@
+===== MYSQL
+# create database, user and set privileges:
+
+create database foo_db;
+create user foo_user identified by 'foo_password';
+grant all on foo_db.* to 'foo_user'@'%';
+flush privileges;
+
+# dump of an entire database
+mysqldump -u user -p password --databases MyDB > MyDBbackup.sql
+
+# dump just the sctructure without data
+mysqldump -u user -p password --databases MyDB --no-data > MyDBbackup.sql
+
+# dump with compress on the fly
+mysqldump -u user -p password --databases MyDB | gzip > bkp.sql.gz
+
+# restore a dumpfile
+mysql -u user -p password MyDB < bkp.sql
+
+
+
+=== POSTGRESQL
+# if you got auth issues after installation, edit this file:
+sudo vim /etc/postgresql/8.4/main/pg_hba.conf
+# and replace all "ident" to "md5" value, then:
+sudo /etc/init.d/postgresql restart
+
+# changing a user password:
+sudo -u postgres psql
+\password user_name
+
+# autoboot
+sudo update-rc.d postgresql enable
+
+# create a new db and user:
+CREATE DATABASE dbname OWNER user ENCODING 'utf8';
+CREATE USER username ENCRYPTED PASSWORD 'password';
+
+# dump
+pg_dump MyDB -f backup.sql -F p -v
+
+# restore dump
+psql -U user -d MyDB -f backup.sql
+

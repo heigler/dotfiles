@@ -1,0 +1,23 @@
+syntax on
+set number
+set incsearch
+set cursorline
+set linebreak
+set ignorecase
+set smartcase
+set scrolloff=5
+set nostartofline
+set smartindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
+set shiftround
+set backspace=indent,eol,start
+set nobackup noswapfile
+set colorcolumn=80
+
+" COLORS
+
+colorscheme darkblue
