@@ -29,7 +29,9 @@
     ll = log --graph --pretty=format:%Cblue%h%d%Creset%x20%s
     la = log --graph --pretty=format:%Cblue%h%d%Creset%x20%s --all
     ls = ls-files
-
+    brp = git push origin #nome_do_branch (faz com que um branch local se torne remoto)
+    brr = git push origin #:heads/nome_do_branch (apaga um branch remoto)
+    brs = git checkout --track -b #nome_do_branch origin/nome_do_branch (monitora um branch remoto localmente)
 [user]
     name = Heigler Rocha
     email = lordheigler@gmail.com
