@@ -20,5 +20,5 @@ set colorcolumn=79
 
 " COLORS
 
-colorscheme developer
-
+"colorscheme developer
+colorscheme delek 
