@@ -22,3 +22,6 @@ set colorcolumn=79
 
 "colorscheme developer
 colorscheme delek 
+
+" syntax highlight for .less files
+au BufNewFile,BufRead *.less set filetype=less
