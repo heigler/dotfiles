@@ -18,6 +18,8 @@ mysqldump -u user -p password --databases MyDB | gzip > bkp.sql.gz
 # restore a dumpfile
 mysql -u user -p password MyDB < bkp.sql
 
+# restore a compressed dumpfile
+gunzip < your_dump_file.sql.gz | mysql -u root -p database_name
 
 
 === POSTGRESQL
