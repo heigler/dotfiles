@@ -25,3 +25,7 @@ colorscheme delek
 
 " syntax highlight for .less files
 au BufNewFile,BufRead *.less set filetype=less
+
+" install packages
+execute pathogen#infect()
+filetype plugin indent on
