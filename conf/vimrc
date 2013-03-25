@@ -29,3 +29,6 @@ au BufNewFile,BufRead *.less set filetype=less
 " install packages
 execute pathogen#infect()
 filetype plugin indent on
+
+" plugins
+autocmd BufWritePost *.py call Flake8()
