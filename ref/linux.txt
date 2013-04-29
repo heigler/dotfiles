@@ -12,6 +12,14 @@ username ALL=(ALL) NOPASSWD: ALL
 ------------
 
 
+## Disable Password-based login
+------------
+sudo vim /etc/ssh/sshd_config
+PasswordAuthentication no
+sudo /etc/init.d/sshd restart
+------------
+
+
 ## Add user to existing group
 
 ------------
@@ -29,7 +37,10 @@ sudo usermod -g group username
 ## Generate a pem key to ssh-login without password
 
 ------------
-ssh-keygen
-cp ~/.ssh/id_rsa /tmp/key.pem
+ssh-keygen -b 1024 -t dsa
+cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+chown user:user ~/.ssh/authorized_keys
+cp ~/.ssh/id_dsa /tmp/key.pem
 chmod 400 /tmp/key.pem 
-
+------------
