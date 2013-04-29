@@ -1,0 +1,35 @@
+## Add a new user
+
+------------
+adduser newuser
+------------
+
+
+## Sudo without password:
+------------
+sudo visudo
+username ALL=(ALL) NOPASSWD: ALL
+------------
+
+
+## Add user to existing group
+
+------------
+sudo usermod -a -G group username
+------------
+
+
+## Changes primary group of a user
+
+------------
+sudo usermod -g group username
+------------
+
+
+## Generate a pem key to ssh-login without password
+
+------------
+ssh-keygen
+cp ~/.ssh/id_rsa /tmp/key.pem
+chmod 400 /tmp/key.pem 
+
