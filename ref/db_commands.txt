@@ -21,6 +21,13 @@ mysql -u user -p password MyDB < bkp.sql
 # restore a compressed dumpfile
 gunzip < your_dump_file.sql.gz | mysql -u root -p database_name
 
+# check all FK constraint by a table
+use INFORMATION_SCHEMA;
+
+select TABLE_NAME,COLUMN_NAME,CONSTRAINT_NAME,
+REFERENCED_TABLE_NAME,REFERENCED_COLUMN_NAME from KEY_COLUMN_USAGE where
+REFERENCED_TABLE_NAME = '<table>';
+
 
 === POSTGRESQL
 # if you got auth issues after installation, edit this file:
