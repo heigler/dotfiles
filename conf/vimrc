@@ -41,3 +41,4 @@ filetype plugin indent on
 
 " plugins
 autocmd BufWritePost *.py call Flake8()
+autocmd BufWritePost *.coffee CoffeeLint | cwindow | redraw!
