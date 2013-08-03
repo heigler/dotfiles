@@ -20,6 +20,7 @@ set colorcolumn=79
 " custom config by file type
 au FileType html setl sw=2 sts=2 et
 au FileType less setl sw=2 sts=2 et
+au FileType stylus setl sw=2 sts=2 et
 au FileType css setl sw=2 sts=2 et
 au FileType javascript setl sw=2 sts=2 et
 au FileType coffee setl sw=2 sts=2 et
