@@ -44,3 +44,15 @@ chown user:user ~/.ssh/authorized_keys
 cp ~/.ssh/id_dsa /tmp/key.pem
 chmod 400 /tmp/key.pem 
 ------------
+
+
+## Grant write/read permissions to a group (step by step)
+
+-----------
+sudo groupadd new_group
+sudo usermod -a -G new_group username
+sudo usermod -a -G new_group username2
+
+sudo chgrp -R new_group /path/to/dir
+sudo chmod -R 770 /path/to/dir
+-----------
