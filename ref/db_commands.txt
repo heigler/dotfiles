@@ -14,9 +14,10 @@ mysqldump -u user -p password --databases MyDB --no-data > MyDBbackup.sql
 
 # dump with compress on the fly
 mysqldump -u user -p password --databases MyDB | gzip > bkp.sql.gz
+mysqldump -u [uname] -p[pass] [dbname] | gzip -9 > [backupfile.sql.gz]
 
 # restore a dumpfile
-mysql -u user -p password MyDB < bkp.sql
+mysql -uuser -ppassword MyDB < bkp.sql
 
 # restore a compressed dumpfile
 gunzip < your_dump_file.sql.gz | mysql -u root -p database_name
