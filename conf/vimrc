@@ -22,8 +22,8 @@ au FileType html setl sw=2 sts=2 et colorcolumn=120
 au FileType less setl sw=2 sts=2 et
 au FileType stylus setl sw=2 sts=2 et
 au FileType css setl sw=2 sts=2 et
-au FileType javascript setl sw=4 sts=4 et
-au FileType coffee setl sw=4 sts=4 et
+au FileType javascript setl sw=2 sts=2 et
+au FileType coffee setl sw=2 sts=2 et
 " backspace fix
 set backspace=indent,eol,start
 
