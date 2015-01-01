@@ -38,4 +38,7 @@
     name = Heigler Rocha
     email = lordheigler@gmail.com
 
-
+[branch]
+	autosetuprebase = always
+[pull]
+	rebase = true
